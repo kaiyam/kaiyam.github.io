@@ -44,21 +44,67 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="material.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.teal-pink.min.css" />
+
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
+    .demo-layout-transparent {
+      background: url('../assets/demos/transparent.jpg') center / cover;
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: black;
+    }
+    .demo-layout-transparent .mdl-navigation__link{
+      color: black;
     }
     </style>
+
   </head>
   <body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+      </main>
+    </div>
+
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+        for="demo-menu-lower-right">
+      <li class="mdl-menu__item">Some Action</li>
+      <li class="mdl-menu__item">Another Action</li>
+      <li disabled class="mdl-menu__item">Disabled Action</li>
+      <li class="mdl-menu__item">Yet Another Action</li>
+    </ul>
+
+
+
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
@@ -176,8 +222,7 @@
       </main>
       <div class="mdl-layout__obfuscator"></div>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/master/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
-    <script src="../../material.min.js"></script>
+    <script src="material.min.js"></script>
   </body>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
