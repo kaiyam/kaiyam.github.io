@@ -217,7 +217,7 @@ body .demo-blog {
   border-bottom-right-radius: 2px;
 }
 .demo-blog .on-the-road-again .mdl-card__media {
-  background-image: url('images/road.jpg');
+  background-image: url('images/mdl.png');
 }
 .demo-blog .shopping .mdl-card__media {
   background-image: url('images/shopping.jpg');
@@ -527,4 +527,8 @@ body .demo-blog {
           align-items: center;
   background-color: white;
   box-sizing: border-box;
+}
+
+.demo-blog .hamburger .mdl-card__media{
+  background-image: url('images/entry/20150909_animation_hamburger_icon.png');
 }
